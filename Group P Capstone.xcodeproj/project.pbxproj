@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		44180929243E3AC500D76D88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44180928243E3AC500D76D88 /* AppDelegate.swift */; };
-		4418092B243E3AC500D76D88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418092A243E3AC500D76D88 /* ViewController.swift */; };
+		4418092B243E3AC500D76D88 /* ArVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418092A243E3AC500D76D88 /* ArVC.swift */; };
 		4418092D243E3AC500D76D88 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4418092C243E3AC500D76D88 /* Experience.rcproject */; };
 		44180930243E3AC500D76D88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4418092E243E3AC500D76D88 /* Main.storyboard */; };
 		44180932243E3AC800D76D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44180931243E3AC800D76D88 /* Assets.xcassets */; };
 		44180935243E3AC800D76D88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44180933243E3AC800D76D88 /* LaunchScreen.storyboard */; };
+		4418093E243E3B7500D76D88 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418093D243E3B7500D76D88 /* HomeVC.swift */; };
+		44180943243E416F00D76D88 /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44180942243E416F00D76D88 /* GridViewCell.swift */; };
+		44180945243E5D7D00D76D88 /* ObjectDescVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44180944243E5D7D00D76D88 /* ObjectDescVC.swift */; };
+		44180947243E6BC500D76D88 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 44180946243E6BC500D76D88 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44180925243E3AC500D76D88 /* Group P Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group P Capstone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44180928243E3AC500D76D88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4418092A243E3AC500D76D88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4418092A243E3AC500D76D88 /* ArVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArVC.swift; sourceTree = "<group>"; };
 		4418092C243E3AC500D76D88 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		4418092F243E3AC500D76D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44180931243E3AC800D76D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44180934243E3AC800D76D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44180936243E3AC800D76D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4418093D243E3B7500D76D88 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		44180942243E416F00D76D88 /* GridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
+		44180944243E5D7D00D76D88 /* ObjectDescVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDescVC.swift; sourceTree = "<group>"; };
+		44180946243E6BC500D76D88 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,35 @@
 		44180927243E3AC500D76D88 /* Group P Capstone */ = {
 			isa = PBXGroup;
 			children = (
+				4418093F243E3B8800D76D88 /* Model */,
+				4418093C243E3B5200D76D88 /* Controllers */,
 				44180928243E3AC500D76D88 /* AppDelegate.swift */,
-				4418092A243E3AC500D76D88 /* ViewController.swift */,
 				4418092C243E3AC500D76D88 /* Experience.rcproject */,
 				4418092E243E3AC500D76D88 /* Main.storyboard */,
 				44180931243E3AC800D76D88 /* Assets.xcassets */,
 				44180933243E3AC800D76D88 /* LaunchScreen.storyboard */,
 				44180936243E3AC800D76D88 /* Info.plist */,
+				44180946243E6BC500D76D88 /* art.scnassets */,
 			);
 			path = "Group P Capstone";
+			sourceTree = "<group>";
+		};
+		4418093C243E3B5200D76D88 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4418092A243E3AC500D76D88 /* ArVC.swift */,
+				4418093D243E3B7500D76D88 /* HomeVC.swift */,
+				44180944243E5D7D00D76D88 /* ObjectDescVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4418093F243E3B8800D76D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44180942243E416F00D76D88 /* GridViewCell.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +156,7 @@
 				44180935243E3AC800D76D88 /* LaunchScreen.storyboard in Resources */,
 				44180932243E3AC800D76D88 /* Assets.xcassets in Resources */,
 				44180930243E3AC500D76D88 /* Main.storyboard in Resources */,
+				44180947243E6BC500D76D88 /* art.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4418092B243E3AC500D76D88 /* ViewController.swift in Sources */,
+				4418092B243E3AC500D76D88 /* ArVC.swift in Sources */,
+				44180943243E416F00D76D88 /* GridViewCell.swift in Sources */,
+				4418093E243E3B7500D76D88 /* HomeVC.swift in Sources */,
 				44180929243E3AC500D76D88 /* AppDelegate.swift in Sources */,
+				44180945243E5D7D00D76D88 /* ObjectDescVC.swift in Sources */,
 				4418092D243E3AC500D76D88 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDPWP5BD2Q;
 				INFOPLIST_FILE = "Group P Capstone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDPWP5BD2Q;
 				INFOPLIST_FILE = "Group P Capstone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
