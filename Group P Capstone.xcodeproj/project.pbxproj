@@ -19,6 +19,7 @@
 		44180947243E6BC500D76D88 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 44180946243E6BC500D76D88 /* art.scnassets */; };
 		446129C224410AA300C04944 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446129C124410AA300C04944 /* TestVC.swift */; };
 		446129C424410EB000C04944 /* SavedImagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446129C324410EB000C04944 /* SavedImagesVC.swift */; };
+		446129C82441169D00C04944 /* SavedImagesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446129C72441169D00C04944 /* SavedImagesViewCell.swift */; };
 		F22E8BE5244110AD008915FE /* LoginRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E8BE4244110AD008915FE /* LoginRegisterVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		44180946243E6BC500D76D88 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		446129C124410AA300C04944 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		446129C324410EB000C04944 /* SavedImagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedImagesVC.swift; sourceTree = "<group>"; };
+		446129C72441169D00C04944 /* SavedImagesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedImagesViewCell.swift; sourceTree = "<group>"; };
 		F22E8BE4244110AD008915FE /* LoginRegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegisterVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				44180942243E416F00D76D88 /* GridViewCell.swift */,
+				446129C72441169D00C04944 /* SavedImagesViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				446129C424410EB000C04944 /* SavedImagesVC.swift in Sources */,
 				4418092B243E3AC500D76D88 /* ArVC.swift in Sources */,
+				446129C82441169D00C04944 /* SavedImagesViewCell.swift in Sources */,
 				F22E8BE5244110AD008915FE /* LoginRegisterVC.swift in Sources */,
 				44180943243E416F00D76D88 /* GridViewCell.swift in Sources */,
 				4418093E243E3B7500D76D88 /* HomeVC.swift in Sources */,

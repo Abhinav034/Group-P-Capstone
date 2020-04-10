@@ -35,7 +35,7 @@ class HomeVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
         
         return cell
        }
-    
+     // MARK: For cell size WRT screen size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let height = view.frame.size.height
@@ -55,11 +55,15 @@ class HomeVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
         
     }
         
-    
+    // MARK: Saved Images screen
     @IBAction func savedImgPressed(_ sender: UIButton) {
-       //saved Images screen
+    let destVC = storyboard?.instantiateViewController(identifier: "savedImagesVC") as! SavedImagesVC
+        navigationController?.pushViewController(destVC, animated: true)
     }
     
+    
+    
+    // MARK: Wishlist screen
     @IBAction func wishlistPressed(_ sender: UIButton) {
         //wishlist screen
     }

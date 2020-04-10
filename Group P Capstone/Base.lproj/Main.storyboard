@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qpn-Wr-ZYq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qpn-Wr-ZYq">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -251,30 +251,51 @@
         <!--Saved ImagesVC-->
         <scene sceneID="0XC-I4-bRJ">
             <objects>
-                <viewController id="wJy-3D-erK" customClass="SavedImagesVC" customModule="Group_P_Capstone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="savedImagesVC" id="wJy-3D-erK" customClass="SavedImagesVC" customModule="Group_P_Capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKu-VR-JZC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wvB-V9-Goh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fhj-MM-2Nt">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="7" minimumInteritemSpacing="7" id="fhj-MM-2Nt">
+                                    <size key="itemSize" width="170" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="7" minY="10" maxX="7" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wT0-x8-6vU">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="wT0-x8-6vU" customClass="SavedImagesViewCell" customModule="Group_P_Capstone" customModuleProvider="target">
+                                        <rect key="frame" x="7" y="10" width="170" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OKb-ic-lm9">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-V2-5Id">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RLS-V2-5Id" firstAttribute="centerY" secondItem="OKb-ic-lm9" secondAttribute="centerY" id="9zD-iq-Uha"/>
+                                                <constraint firstItem="RLS-V2-5Id" firstAttribute="centerX" secondItem="OKb-ic-lm9" secondAttribute="centerX" id="GZF-pw-0Hv"/>
+                                                <constraint firstItem="RLS-V2-5Id" firstAttribute="leading" secondItem="OKb-ic-lm9" secondAttribute="leading" id="K8J-Fk-sPH"/>
+                                                <constraint firstItem="RLS-V2-5Id" firstAttribute="top" secondItem="OKb-ic-lm9" secondAttribute="top" id="Qrx-72-bSU"/>
+                                                <constraint firstAttribute="trailing" secondItem="RLS-V2-5Id" secondAttribute="trailing" id="Qty-wE-JkG"/>
+                                                <constraint firstAttribute="bottom" secondItem="RLS-V2-5Id" secondAttribute="bottom" id="dxk-Yv-LCv"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="170" height="128"/>
+                                        <connections>
+                                            <outlet property="imgViewCell" destination="RLS-V2-5Id" id="Goz-Yd-iky"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wJy-3D-erK" id="1d3-2A-0r2"/>
+                                    <outlet property="delegate" destination="wJy-3D-erK" id="rId-Qi-djJ"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -341,48 +362,48 @@
         <!--Login RegisterVC-->
         <scene sceneID="z2o-kE-Nll">
             <objects>
-                <viewController id="gPG-M1-d34" customClass="LoginRegisterVC" customModule="a" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gPG-M1-d34" customClass="LoginRegisterVC" customModule="Group_P_Capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="roL-dK-z5C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Pi-QR-35o">
-                                <rect key="frame" x="30" y="174" width="315" height="319"/>
+                                <rect key="frame" x="30" y="171" width="315" height="325"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cY6-fG-IVW">
-                                        <rect key="frame" x="0.0" y="0.0" width="305" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="28.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email (Username)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0sw-Mh-vwd">
-                                        <rect key="frame" x="0.0" y="47" width="305" height="27"/>
+                                        <rect key="frame" x="0.0" y="48.5" width="305" height="28.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CT5-UZ-N8Q">
-                                        <rect key="frame" x="0.0" y="94" width="305" height="27"/>
+                                        <rect key="frame" x="0.0" y="97" width="305" height="28.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Phone No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqm-R7-8KF" userLabel="PhoneNoTF">
-                                        <rect key="frame" x="0.0" y="141" width="305" height="27"/>
+                                        <rect key="frame" x="0.0" y="145.5" width="305" height="28.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vsp-Tu-vds">
-                                        <rect key="frame" x="0.0" y="188" width="165" height="32"/>
+                                        <rect key="frame" x="0.0" y="194" width="165" height="32"/>
                                         <segments>
                                             <segment title="Consumer"/>
                                             <segment title="Business"/>
                                         </segments>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgZ-M8-Wmw">
-                                        <rect key="frame" x="0.0" y="239" width="305" height="30"/>
+                                        <rect key="frame" x="0.0" y="245" width="305" height="30"/>
                                         <color key="backgroundColor" red="0.47635350589999997" green="0.84267407660000004" blue="0.531914993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Login"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lua-Hx-XzC">
-                                        <rect key="frame" x="0.0" y="289" width="305" height="30"/>
+                                        <rect key="frame" x="0.0" y="295" width="305" height="30"/>
                                         <state key="normal" title="Dont Have an Account ? Register"/>
                                         <connections>
                                             <action selector="navigationBtnPressed:" destination="gPG-M1-d34" eventType="touchUpInside" id="dSQ-Cl-KkS"/>
@@ -608,9 +629,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.circle" catalog="system" width="64" height="60"/>
+        <image name="camera.circle" catalog="system" width="128" height="121"/>
         <image name="couch" width="1920" height="1080"/>
-        <image name="folder.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
+        <image name="folder.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
     </resources>
 </document>
