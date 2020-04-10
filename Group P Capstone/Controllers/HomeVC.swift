@@ -57,7 +57,7 @@ class HomeVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
         
     
     @IBAction func savedImgPressed(_ sender: UIButton) {
-        // saved images screen
+       //saved Images screen
     }
     
     @IBAction func wishlistPressed(_ sender: UIButton) {

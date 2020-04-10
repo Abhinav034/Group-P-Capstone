@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+var imgArr = [String]()
 class ObjectDescVC: UIViewController {
 
     @IBOutlet weak var ObjectImageView: UIImageView!
@@ -22,6 +22,8 @@ class ObjectDescVC: UIViewController {
     
     var imageName:String?
     var liked:Bool = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +42,18 @@ class ObjectDescVC: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
+        
+        
+      let savedImage = saveImage(UIImage(named: imageName!)!)
+        
+        if savedImage {
+            imgArr.append(imageName!)
+            alert(title: "Saved !", message: "Image Saved Successfully", buttonTitle: "OK")
+        }
+        else{
+           alert(title: "Warning !", message: "Error saving image", buttonTitle: "OK")
+        }
+        
     }
     
     @IBAction func likeButtonPressed(_ sender: UIButton) {
@@ -57,5 +71,35 @@ class ObjectDescVC: UIViewController {
         }
     
     }
+    
+    func saveImage( _ image: UIImage)-> Bool{
+        guard let data = image.jpegData(compressionQuality: 1) ?? image.pngData() else {
+            return false
+        }
+        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
+            return false
+        }
+        do {
+            try data.write(to: directory.appendingPathComponent("\(imageName!).png")!)
+            return true
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
+    }
+    
+    
+    func alert(title: String , message: String , buttonTitle: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
     
 }
